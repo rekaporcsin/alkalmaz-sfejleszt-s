@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\hu",
+    "\\src\\main\\java\\hu\\beadando",
+    "\\src\\main\\java\\hu\\beadando\\futoverseny",
+    "\\src\\main\\java\\hu\\beadando\\futoverseny\\entity",
+    "\\src\\main\\java\\hu\\beadando\\futoverseny\\repository",
+    "\\src\\main\\java\\hu\\beadando\\futoverseny\\service"
+  ],
+  "SelectedNode": "\\pom.xml",
+  "PreviewInSolutionExplorer": false
+}

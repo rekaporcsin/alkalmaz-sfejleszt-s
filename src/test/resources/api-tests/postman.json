@@ -1,0 +1,120 @@
+{
+  "info": {
+    "name": "Futóverseny API Tests",
+    "_postman_id": "futoverseny-collection-12345",
+    "description": "Postman tesztgyűjtemény a Futóverseny Kezelő Alkalmazás REST API-jaihoz.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all runners",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/getRunners",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["getRunners"]
+        }
+      }
+    },
+    {
+      "name": "Add runner",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Teszt Elek\",\n  \"age\": 28,\n  \"gender\": \"MALE\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/addRunner",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["addRunner"]
+        }
+      }
+    },
+    {
+      "name": "Get runners of race (sorted)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/getRaceRunners/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["getRaceRunners", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update race",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"raceId\": 1,\n  \"name\": \"Városi Félmaraton - updated\",\n  \"distanceKm\": 22.5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/updateRace",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["updateRace"]
+        }
+      }
+    },
+    {
+      "name": "Add result",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"runnerId\": 1,\n  \"raceId\": 1,\n  \"timeMinutes\": 125\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/addResult",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["addResult"]
+        }
+      }
+    },
+    {
+      "name": "Get average race time",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/getAverageTime/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["getAverageTime", "1"]
+        }
+      }
+    }
+  ]
+}
